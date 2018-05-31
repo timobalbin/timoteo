@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+	printf("%i\n", fibo(8));
+}
+
+int fibo(int n) {
+	int result=0, x=0, y=1, i;
+	if(n==2){
+	return 1;
+	}
+	if(n==1){
+	return 0;
+	}	
+	for(i=3 ; i<=n ; i=i+1) {
+		result = x+y;
+		x=y;
+		y=result;
+	}
+	return result;
+}
+
